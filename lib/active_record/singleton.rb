@@ -14,7 +14,7 @@ module ActiveRecord
 
     private
 
-    def create_or_update
+    def create_or_update(**, &block)
       run_callbacks(:save) do
         raise ReadOnlyRecord if readonly?
 
